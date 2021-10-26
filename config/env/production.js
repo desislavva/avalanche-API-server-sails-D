@@ -21,6 +21,8 @@
 
  const dotenv = require('dotenv');
  dotenv.config();
+
+ const websocketServer = require('../../websocket-server');
  
 
 module.exports = {
