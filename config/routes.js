@@ -31,7 +31,7 @@ module.exports.routes = {
 
   ///////// TRANSACTIONS //////////
   '/transactions/hash/:hash': { controller: 'TransactionController', action: 'getTransactionByHash' },
-  '/transactions/:address/:n/:x': { controller: 'TransactionController', action: 'transaction/getXTransactionsAfterNthFromAddress' },
+  '/transactions/:address/:n/:x': { controller: 'TransactionController', action: 'getXTransactionsAfterNthFromAddress' },
   '/transactions/:n/:x': { controller: 'TransactionController', action: 'getXPendingTransactionsAfterNth' },
   '/transactions/recentxchain': { controller: 'TransactionController', action: 'getRecentTransactionsFromXChain' },
   '/transactions/recentpchain': { controller: 'TransactionController', action: 'getRecentTransactionsFromPChain' },
