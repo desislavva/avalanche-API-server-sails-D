@@ -21,6 +21,24 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
 
+  ///////// NETWORK //////////////
+  '/network': { controller: 'NetworkController', action: 'getNetWorkActivity' },
+
+  /////////// BLOCKS /////////////
+  '/blocks/hash/:hash': { controller: 'BlockController', action: 'getBlockByHash' },
+  '/blocks/number/:blocknumber': { controller: 'BlockController', action: 'getBlockByNumber' },
+  '/blocks/numbers/:blocknumber/:count': { controller: 'BlockController', action: 'getXBlocksFromNthFromCChain' },
+
+  ///////// TRANSACTIONS //////////
+  '/transactions/hash/:hash': { controller: 'TransactionController', action: 'getTransactionByHash' },
+  '/transactions/:address/:n/:x': { controller: 'TransactionController', action: 'transaction/getXTransactionsAfterNthFromAddress' },
+  '/transactions/:n/:x': { controller: 'TransactionController', action: 'getXPendingTransactionsAfterNth' },
+  '/transactions/recentxchain': { controller: 'TransactionController', action: 'getRecentTransactionsFromXChain' },
+  '/transactions/recentpchain': { controller: 'TransactionController', action: 'getRecentTransactionsFromPChain' },
+
+  ///////// ADDRESS /////////////
+  '/address/hash/:hash': { controller: 'AddressController', action: 'getAddressInfoByHash' },
+
 
   /***************************************************************************
   *                                                                          *
